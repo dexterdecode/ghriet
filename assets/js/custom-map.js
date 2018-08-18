@@ -5,10 +5,10 @@
     START - Google Map Active
     ------------------------------ */
 	if ($.fn.gmap3) {
-		var center = [47.772323, -112.214897];
+		var center = [18.572419, 73.981704];
 	    $('.google-map')
 		  .gmap3({
-			center:[41.850033, -87.650052],
+			center:[18.572419, 73.981704],
 			zoom:15,
 			mapTypeId: "shadeOfGrey", // to select it directly
 			mapTypeControlOptions: {
