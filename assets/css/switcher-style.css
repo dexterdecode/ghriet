@@ -1,7 +1,7 @@
 .switcher-area {
     position: fixed;
     z-index: 9999;
-    top: 0;
+    top: 80;
     right: -232px;
     bottom: 0;
     margin: auto;
