@@ -41,6 +41,13 @@
     border: none;
 }
 
+.dop {
+	background-color: #fff;
+	min-height: 1px;
+	min-width: 260px;
+	align:center;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -57,32 +64,29 @@
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-	
 }
-
 .dropdown-content a:hover {background-color: #ddd;}
+.show {display: block;}
 
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
 <script type="text/javascript" src="assets/js/emailjsc.js"></script>
 	</head>
 	<body data-spy="scroll" data-target=".header" data-offset="50">
 		<!-- Page loader -->
-	    <div id="preloader"></div>
+	    
+		<div id="preloader"></div>
 		<!-- header section start -->
 		<header class="header">
 			<div class="container">
 				<div class="row flexbox-center">
 					<div class="col-lg-2 col-md-3 col-6">
 						<div class="logo">
-							<a href="#home"><img src="assets/img/logo.png" alt="logo" /></a>
+							<a href="#home"><img src="assets/img/logo.png" alt="logo" style="min-height: 25px;"/></a>
 						</div>
 					</div>
 					<div class="col-lg-10 col-md-9 col-6">
@@ -94,17 +98,26 @@
                                 <li><a class="nav-link" href="#screenshot">Screenshot</a></li>
                                 <li><a class="nav-link" href="#team">Team</a></li>
                                 <li><a class="nav-link" href="#blog">News</a></li>
-								<li class="nav-link">
-								<div class="dropdown dropbtn">Papers
-									<div class="dropdown-content">
-									<a href="assets/docs/Neural_Balances_Theory_For_Emotions.pdf" download>Neural Network Theory</a>
-									<a href="assets/docs/voip_technology.pdf" download>VoIP Technology</a>
-									<a href="#">Emotional Analysis Theory</a>
+								<div  id="clicky" onclick="show2()" class="paper-btn dropdown" style="position: relative; z-index: 88888;">
+								<div class="row" style="margin-left: 1px; margin-right: 1px;">
+								<div style="padding-right: 3px">
+								<img src="assets/img/lock.png" alt="lock" style="min-height: 16px; min-width:11px; max-height: 10px; max-width:20px;"/>
+								</div>
+								<div>
+								Papers
+								</div>
+								</div>
+									<div id="myDropdown" class="dropdown-content">
+									<a id="mmi0" href="assets/docs/Neural_Balances_Theory_For_Emotions.pdf" download>Neural Network Theory</a>
+									<a id="mmi" href="assets/docs/IEEE_base_paper.pdf" download>IEEE Emotions (Base Paper)</a>
+									<a id="mmi2" href="assets/docs/ABSTRACT.docx" download>Abstract (Emotions)</a>
+									<a id="mmi3" href="assets/docs/Synopsis.docx" download>Synopsis (Emotions)</a>
+									<div class="dop"></div>
+									<a id="mmi4" href="assets/docs/voip_technology.pdf" download>VoIP Technology</a>
 									</div>
 								</div>
-								</li>
-                                <li><a class="nav-link" href="#contact">Contact Us</a></li>
-                                <li><a class="appao-btn" href="#">Download</a></li>
+                                <li><a id="mmi5" class="nav-link" href="#contact">Contact Us</a></li>
+                                <li><a id="mmi6" class="appao-btn" href="#" onclick="inactive()">Download</a></li>
                             </ul>
 					    </div>
 					</div>
@@ -123,8 +136,8 @@
 								<div class="hero-area-content">
 									<h1>(Frost Messenger) Messaging made fun </h1>
 									<p>Frost Messenger is a free messaging app available. Frost uses VOIP to let you message and call friends and family. Messaging is made fun with Frost, send and receive messages, calls and a lot more. </p>
-									<a href="#" class="appao-btn">Google Play</a>
-									<a href="#" class="appao-btn">App Store</a>
+									<a href="#" class="appao-btn" onclick="inactive()">Google Play</a>
+									<a href="frost_detail.html" class="appao-btn">Read more</a>
 								</div>
 							</div>
 							<div class="col-lg-5">
@@ -160,7 +173,7 @@
 								<div class="hero-area-content">
 									<h1>Assets Based Micro-grid System</h1>
 									<p>Smart microgrid & energy Community Interest Company owned by local people with the community benefit of providing low cost energy to the town/district<br>A software enabling: billing, demand, production & asset management (SaaS)</p>
-									<a href="#" class="appao-btn">Read more</a>
+									<a href="microgrid_detail.html" class="appao-btn">Read more</a>
 								</div>
 							</div>
 							<div class="col-lg-5">
@@ -214,21 +227,21 @@ Place international calls to mobile phones with no additional charges. You can c
 					    <div class="single-about-box">
 							<i class="icofont icofont-ruler-pencil"></i>
 							<h4>Responsive Design</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+							<p>Flexible layouts designed to enhance user experience. Compatible with mobile phones and tables.</p>
 						</div>
 					</div>
 					<div class="col-lg-4">
 					    <div class="single-about-box active">
 							<i class="icofont icofont-computer"></i>
 							<h4>Fast Performance</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+							<p>Complex processing is executed on a different thread asynchronously to stabilize UI and boost up performance.</p>
 						</div>
 					</div>
 					<div class="col-lg-4">
 					    <div class="single-about-box">
 							<i class="icofont icofont-headphone-alt"></i>
-							<h4>Cross Platfrom</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+							<h4>Security</h4>
+							<p>User Privacy is enabled with QR code validation and end-to-end encryption to requests as FAT client.</p>
 						</div>
 					</div>
 				</div>
@@ -424,90 +437,39 @@ Place international calls to mobile phones with no additional charges. You can c
 				</div>
 			</div>
 		</section><!-- screenshots section end -->
-		<!-- pricing section start -->
-		<section class="pricing-area ptb-90" id="pricing">
+		<!-- video section 2 start -->
+		<section class="video-area2 ptb-90">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-					    <div class="sec-title">
-							<h2>Our Pricing Plan<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+					<div class="col-lg-6 single-about-box">
+					    <div class="video-popup">
+							<a href="https://www.youtube.com/watch?v=clBKlmtQom8" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+							<h2 style="color:white">What is a microgrid?</h2>
+						</div>
+					</div>
+					<div class="col-lg-6 single-about-box">
+					    <div class="video-popup">
+							<a href="https://www.youtube.com/watch?v=ybBn3L6_Evw" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+							<h2 style="color:white">How does a microgrid work?</h2>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="single-pricing-box">
-							<div class="pricing-top">
-								<h4>Basic</h4>
-								<p>Suitable for Freelancer</p>
-							</div>
-							<div class="price">
-								<h1><span>$</span>99</h1>
-								<p>Basic</p>
-							</div>
-							<div class="price-details">
-								<ul>
-									<li>Email Marketing</li>
-									<li>Email Builder</li>
-									<li>Client Testing</li>
-									<li>Multiple Email Support</li>
-									<li>Email Read Receipent</li>
-									<li>2 User Free</li>
-								</ul>
-								<a class="appao-btn" href="#">Order Now</a>
-							</div>
+				<div class="row" style="margin-top: 50px;">
+					<div class="col-lg-6 single-about-box">
+					    <div class="video-popup">
+							<a href="https://www.youtube.com/watch?v=2xoOCXoeHOs" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+							<h2 style="color:white">Future of the Grid</h2>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-pricing-box">
-							<div class="pricing-top">
-								<h4>Pro</h4>
-								<p>Suitable for Freelancer</p>
-							</div>
-							<div class="price">
-								<h1><span>$</span>199</h1>
-								<p>Basic</p>
-							</div>
-							<div class="price-details">
-								<ul>
-									<li>Email Marketing</li>
-									<li>Email Builder</li>
-									<li>Client Testing</li>
-									<li>Multiple Email Support</li>
-									<li>Email Read Receipent</li>
-									<li>2 User Free</li>
-								</ul>
-								<a class="appao-btn" href="#">Order Now</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="single-pricing-box">
-							<div class="pricing-top">
-								<h4>Ultimate</h4>
-								<p>Suitable for Freelancer</p>
-							</div>
-							<div class="price">
-								<h1><span>$</span>299</h1>
-								<p>Basic</p>
-							</div>
-							<div class="price-details">
-								<ul>
-									<li>Email Marketing</li>
-									<li>Email Builder</li>
-									<li>Client Testing</li>
-									<li>Multiple Email Support</li>
-									<li>Email Read Receipent</li>
-									<li>2 User Free</li>
-								</ul>
-								<a class="appao-btn" href="#">Order Now</a>
-							</div>
+					<div class="col-lg-6 single-about-box">
+					    <div class="video-popup">
+							<a href="https://www.youtube.com/watch?v=Rp8lAJvPLPI" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+							<h2 style="color:white">Microgrid Benefits</h2>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section><!-- pricing section end -->
+		</section><!-- video section 2 end -->
 		<!-- testimonial section start -->
 		<section class="testimonial-area ptb-90">
 			<div class="container">
@@ -631,7 +593,33 @@ Place international calls to mobile phones with no additional charges. You can c
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" style="margin-left: 1px;">
+						<div class="col-lg-2" >
+						<div class="single-about-box active grad" style="border-radius: 15px;">
+							<p style="color: white; text-align:center;">The Task of Software Development Team is to Engineer The Illusion Of Simplity.</p>
+						</div>
+						</div>
+					<div class="col-lg-3 col-sm-6">
+					    <div class="single-team-member">
+							<div class="team-member-img">
+								<img src="assets/img/team/team0.jpg" alt="team">
+								<div class="team-member-icon">
+									<div class="display-table">
+										<div class="display-tablecell">
+											<a href="#"><i class="icofont icofont-social-facebook"></i></a>
+											<a href="#"><i class="icofont icofont-social-twitter"></i></a>
+											<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
+											<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="team-member-info">
+								<a href="#"><h4>Sunny Sontakki</h4></a>
+								<p>Lead Programmer</p>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-sm-6">
 					    <div class="single-team-member">
 							<div class="team-member-img">
@@ -648,8 +636,8 @@ Place international calls to mobile phones with no additional charges. You can c
 								</div>
 							</div>
 							<div class="team-member-info">
-								<a href="#"><h4>Sunny Sontakki</h4></a>
-								<p>Lead Developer</p>
+								<a href="#"><h4>Sharon Garcia</h4></a>
+								<p>UX Designer</p>
 							</div>
 						</div>
 					</div>
@@ -669,50 +657,8 @@ Place international calls to mobile phones with no additional charges. You can c
 								</div>
 							</div>
 							<div class="team-member-info">
-								<a href="#"><h4>Sharon Garcia</h4></a>
-								<p>UX Designer</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-					    <div class="single-team-member">
-							<div class="team-member-img">
-								<img src="assets/img/team/team3.jpg" alt="team">
-								<div class="team-member-icon">
-									<div class="display-table">
-										<div class="display-tablecell">
-											<a href="#"><i class="icofont icofont-social-facebook"></i></a>
-											<a href="#"><i class="icofont icofont-social-twitter"></i></a>
-											<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-											<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="team-member-info">
 								<a href="#"><h4>Tom Thomas</h4></a>
-								<p>UX Designer</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-					    <div class="single-team-member">
-							<div class="team-member-img">
-								<img src="assets/img/team/team4.jpg" alt="team">
-								<div class="team-member-icon">
-									<div class="display-table">
-										<div class="display-tablecell">
-											<a href="#"><i class="icofont icofont-social-facebook"></i></a>
-											<a href="#"><i class="icofont icofont-social-twitter"></i></a>
-											<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-											<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="team-member-info">
-								<a href="#"><h4>Sharon Garcia</h4></a>
-								<p>UX Designer</p>
+								<p>Technical Writer</p>
 							</div>
 						</div>
 					</div>
@@ -765,53 +711,20 @@ Place international calls to mobile phones with no additional charges. You can c
 		</div>
 		</section><!-- team section end -->
 		<!-- download section start -->
-		<section class="download-area ptb-90">
+		<section class="video-area3 ptb-90">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-					    <div class="sec-title">
-							<h2>Download Available<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+					<div class="col-lg-6 single-about-box">
+					    <div class="video-popup">
+							<a href="https://www.youtube.com/watch?v=qHJeN7n6ow0" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+							<h2 style="color:white">VOIP 101</h2>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<ul>
-							<li>
-								<a href="#" class="download-btn flexbox-center">
-									<div class="download-btn-icon">
-										<i class="icofont icofont-brand-android-robot"></i>
-									</div>
-									<div class="download-btn-text">
-										<p>Available on</p>
-										<h4>Android Store</h4>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="download-btn flexbox-center">
-									<div class="download-btn-icon">
-										<i class="icofont icofont-brand-apple"></i>
-									</div>
-									<div class="download-btn-text">
-										<p>Available on</p>
-										<h4>Apple Store</h4>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="download-btn flexbox-center">
-									<div class="download-btn-icon">
-										<i class="icofont icofont-brand-windows"></i>
-									</div>
-									<div class="download-btn-text">
-										<p>Available on</p>
-										<h4>Windows Store</h4>
-									</div>
-								</a>
-							</li>
-						</ul>
+					<div class="col-lg-6 single-about-box">
+					    <div class="video-popup">
+							<a href="https://www.youtube.com/watch?v=f6MD-_dQes0" class="popup-youtube"><i class="icofont icofont-ui-play"></i></a>
+							<h2 style="color:white">What is VoIP?</h2>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1021,6 +934,59 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		
 		<script src="assets/js/particles.js"></script>
 		<script src="assets/js/app.js"></script>
+		<script>
+		function inactive() {
+		alert('Application download links are currently inactive. For any queries contact details are given below.')
+		}
+		/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function showfnc() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown')) {
+  tog = 0;
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+		</script>
+		<script>
+		
+		function show2() {
+		$(document).ready(function(){
+var isHidden = $('#mmi').is(':hidden');
+if(isHidden) {
+var person = prompt("Please enter password", "");
+if (person == 'becomp') {
+$('#myDropdown').show();
+$('#myDropdown').data('clicked',true);
+}
+}
+});
+		}
+		
+$('body').click(function(evt){
+		var isHidden = $('#mmi').is(':hidden'); 
+		if(!isHidden) {
+			if(evt.target.id == '#mmi0' || evt.target.id == '#mmi' || evt.target.id == '#mmi2' || evt.target.id == '#mmi3' || evt.target.id == '#mmi4' || evt.target.id == '#mmi5' || evt.target.id == '#mmi6' || evt.target.id == 'clicky') {
+	   
+			}
+			else {
+					$('#myDropdown').hide();
+			}
+		}
+
+});
+
+</script>
 	</body>
 </html>
