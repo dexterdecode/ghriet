@@ -98,7 +98,7 @@
                                 <li><a class="nav-link" href="#screenshot">Screenshot</a></li>
                                 <li><a class="nav-link" href="#team">Team</a></li>
                                 <li><a class="nav-link" href="#blog">News</a></li>
-								<div  id="clicky" onclick="show2()" class="paper-btn dropdown" style="position: relative; z-index: 88888;">
+								<div  id="clicky" onclick="show2()" class="paper-btn dropdown" style="position: relative; z-index: 2;">
 								<div class="row" style="margin-left: 1px; margin-right: 1px;">
 								<div style="padding-right: 3px">
 								<img src="assets/img/lock.png" alt="lock" style="min-height: 16px; min-width:11px; max-height: 10px; max-width:20px;"/>
@@ -869,6 +869,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		
 		<script src="assets/js/particles.js"></script>
 		<script src="assets/js/app.js"></script>
+		<script src="assets/js/wordp.js"></script>
 		<script>
 		function inactive() {
 		alert('Application download links are currently inactive. For any queries contact details are given below.')
@@ -897,34 +898,5 @@ window.onclick = function(event) {
   }
 }
 		</script>
-		<script>
-		
-		function show2() {
-		$(document).ready(function(){
-var isHidden = $('#mmi').is(':hidden');
-if(isHidden) {
-var person = prompt("Please enter password", "");
-if (person == 'becomp') {
-$('#myDropdown').show();
-$('#myDropdown').data('clicked',true);
-}
-}
-});
-		}
-		
-$('body').click(function(evt){
-		var isHidden = $('#mmi').is(':hidden'); 
-		if(!isHidden) {
-			if(evt.target.id == '#mmi0' || evt.target.id == '#mmi' || evt.target.id == '#mmi2' || evt.target.id == '#mmi3' || evt.target.id == '#mmi4' || evt.target.id == '#mmi5' || evt.target.id == '#mmi6' || evt.target.id == 'clicky') {
-	   
-			}
-			else {
-					$('#myDropdown').hide();
-			}
-		}
-
-});
-
-</script>
 	</body>
 </html>
