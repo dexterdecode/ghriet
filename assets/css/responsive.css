@@ -26,9 +26,9 @@
 	ul.slicknav_nav {
 		position: absolute;
 		background: #000529;
-		background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
-		background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
-		background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+		background: -moz-linear-gradient(left, #003542 1%,#004F63 24%,#007896 67%,#00BEED 100%);
+		background: -webkit-linear-gradient(left, #003542 1%,#004F63 24%,#007896 67%,#00BEED 100%);
+		background: linear-gradient(to right, #003542 1%,#004F63 24%,#007896 67%,#00BEED 100%);
 		right: 15px;
 		top: 100%;
 		z-index: 9;
