@@ -906,7 +906,7 @@ input::-webkit-input-placeholder {
 -------- COUNTERUP AREA CSS START --------
 ---------------------------------------*/
 .counter-area {
-    background: url(../img/counter-bg.jpg) no-repeat center / cover;
+    background: url(../img/footer-bg.jpg) no-repeat center / cover;
 	background-attachment: fixed;
     position: relative;
     text-align: center;
