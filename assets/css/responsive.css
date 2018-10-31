@@ -392,3 +392,24 @@
 		margin-top: 30px;
 	}
 }
+///
+
+@media only screen and (min-width: 320px){
+
+	#test0 {
+		margin-left:-50%;
+	}
+	#test1 {
+		margin-left:-40%;
+	}
+	#test2 {
+		margin-left:-250px;
+	}
+	#test3 {
+		margin-right:10%;
+	}
+	#test4 {
+		margin-left:-50%;
+	}
+
+}
